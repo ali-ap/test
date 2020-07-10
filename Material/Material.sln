@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LUM.Services.Material", "LUM.Services.Material\LUM.Services.Material.csproj", "{32088540-E248-4B53-8FEA-BDCA13426911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LUM.Services.Material.Test", "LUM.Services.Material.Test\LUM.Services.Material.Test.csproj", "{6B6A09BA-290C-4F85-A7A3-D33375409C41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32088540-E248-4B53-8FEA-BDCA13426911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32088540-E248-4B53-8FEA-BDCA13426911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32088540-E248-4B53-8FEA-BDCA13426911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32088540-E248-4B53-8FEA-BDCA13426911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B6A09BA-290C-4F85-A7A3-D33375409C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6A09BA-290C-4F85-A7A3-D33375409C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6A09BA-290C-4F85-A7A3-D33375409C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6A09BA-290C-4F85-A7A3-D33375409C41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {428F92C9-969C-445C-B329-291041F4762F}
+	EndGlobalSection
+EndGlobal
