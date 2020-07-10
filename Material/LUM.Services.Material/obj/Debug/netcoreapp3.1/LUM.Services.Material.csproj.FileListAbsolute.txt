@@ -34,3 +34,4 @@ D:\Development\Test\LUM\Test\Material\LUM.Services.Material\obj\Debug\netcoreapp
 D:\Development\Test\LUM\Test\Material\LUM.Services.Material\obj\Debug\netcoreapp3.1\LUM.Services.Material.dll
 D:\Development\Test\LUM\Test\Material\LUM.Services.Material\obj\Debug\netcoreapp3.1\LUM.Services.Material.pdb
 D:\Development\Test\LUM\Test\Material\LUM.Services.Material\obj\Debug\netcoreapp3.1\LUM.Services.Material.genruntimeconfig.cache
+D:\Development\Test\LUM\Test\Material\LUM.Services.Material\obj\Debug\netcoreapp3.1\LUM.Services.Material.csprojAssemblyReference.cache
