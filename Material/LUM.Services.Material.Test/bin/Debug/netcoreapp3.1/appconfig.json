@@ -2,7 +2,7 @@
   "Setting": {
     "Database": {
       "Name": "Material",
-      "Address": "http://127.0.0.1:8070/"
+      "Address": "http://127.0.0.1:8090/"
     },
     "BaseUrl": "http://localhost"
 

@@ -7,8 +7,8 @@ namespace LUM.Services.Material.Validation
     {
         public UpdateMaterialBindingModelValidator()
         {
-            RuleFor(x => x.FunctionMinTemperature).GreaterThanOrEqualTo(4).LessThanOrEqualTo(80);
-            RuleFor(x => x.FunctionMaxTemperature).GreaterThanOrEqualTo(4).LessThanOrEqualTo(80);
+            RuleFor(x => x.FunctionMinTemperature).GreaterThanOrEqualTo(4).LessThanOrEqualTo(80).Must((model, field) => field < model.FunctionMaxTemperature);
+            RuleFor(x => x.FunctionMaxTemperature).GreaterThanOrEqualTo(4).LessThanOrEqualTo(80).Must((model, field) => field >= model.FunctionMinTemperature); ;
         }
     }
 }

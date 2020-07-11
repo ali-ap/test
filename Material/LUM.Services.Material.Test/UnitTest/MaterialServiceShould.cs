@@ -45,7 +45,14 @@ namespace LUM.Services.Material.Test.UnitTest
             moq.FunctionMaxTemperature = 100;
             await Assert.ThrowsAsync<ArgumentException>(() => _materialService.AddAsync(moq));
         }
-
+        [Fact]
+        public async Task Create_New_Material_With_Invalid_Temperature_Data_Must_Be_Throw_ArgumentException()
+        {
+            var moq = MockHelper.MoqCreateMaterialBindingModel();
+            moq.FunctionMinTemperature = 30;
+            moq.FunctionMaxTemperature = 10;
+            await Assert.ThrowsAsync<AutoMapperMappingException>(() => _materialService.AddAsync(moq));
+        }
         [Fact]
         public async Task Read_Material_By_Id_Returns_Single_Result()
         {
