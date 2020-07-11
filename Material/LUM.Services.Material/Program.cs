@@ -20,7 +20,9 @@ namespace LUM.Services.Material
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                        .UseUrls("http://*:8060")
+                        .UseStartup<Startup>();
                 });
     }
 }
