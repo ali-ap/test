@@ -1,18 +1,13 @@
 using System;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
-using LUM.Services.Material.Common.Enum;
 using LUM.Services.Material.Model.Query;
 using LUM.Services.Material.Model.Request;
-using LUM.Services.Material.Repository;
 using LUM.Services.Material.Service;
 using LUM.Services.Material.Test.Fixture;
 using LUM.Services.Material.Test.Helper;
 using Microsoft.Extensions.DependencyInjection;
-using Moq;
-using Raven.Client.Documents;
 using Xunit;
 
 namespace LUM.Services.Material.Test.UnitTest

@@ -5,7 +5,6 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AutoMapper;
 using LUM.Services.Material.Common.Behavior;
-using LUM.Services.Material.Mapper;
 using LUM.Services.Material.Model.Query;
 using LUM.Services.Material.Model.Request;
 using LUM.Services.Material.Model.Response;
