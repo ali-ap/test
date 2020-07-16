@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using LUM.Services.Material.Common.Persistence;
 using LUM.Services.Material.Mapper;
 using LUM.Services.Material.Repository;
 using LUM.Services.Material.Service;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Raven.Client.Documents;
 using Raven.Client.Documents.Indexes;
