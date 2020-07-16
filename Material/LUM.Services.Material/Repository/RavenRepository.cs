@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
 using LUM.Services.Material.Type;
 using Raven.Client.Documents;
-using Raven.Client.Documents.Commands.Batches;
-using Raven.Client.Documents.Operations;
 using Raven.Client.Documents.Session;
 
 namespace LUM.Services.Material.Repository

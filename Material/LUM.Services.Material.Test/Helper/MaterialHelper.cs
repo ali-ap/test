@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoFixture;
-using LUM.Services.Material.Common.Enum;
+﻿using AutoFixture;
 using LUM.Services.Material.Model.Request;
-using Moq;
 
 namespace LUM.Services.Material.Test.Helper
 {

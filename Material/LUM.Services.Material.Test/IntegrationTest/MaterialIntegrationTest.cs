@@ -1,18 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
 using LUM.Services.Material.Common.Infrastructure;
-using LUM.Services.Material.Model.Query;
 using LUM.Services.Material.Model.Request;
 using LUM.Services.Material.Model.Response;
 using LUM.Services.Material.Service;
 using LUM.Services.Material.Test.Fixture;
 using LUM.Services.Material.Test.Helper;
-using LUM.Services.Material.Type;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
