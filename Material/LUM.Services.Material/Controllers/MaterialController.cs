@@ -1,8 +1,13 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
+using Akka.Actor;
+using LUM.Services.Material.Actor;
+using LUM.Services.Material.Command;
 using LUM.Services.Material.Model.Query;
 using LUM.Services.Material.Model.Request;
+using LUM.Services.Material.Model.Response;
 using LUM.Services.Material.Service;
+using LUM.Services.Material.Type;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Annotations;
@@ -13,15 +18,15 @@ namespace LUM.Services.Material.Controllers
     [Route("[controller]")]
     public class MaterialController : ControllerBase
     {
-        private readonly IMaterialService _materialService;
+        private readonly IActorRef _materialActor;
 
 
         private readonly ILogger<MaterialController> _logger;
 
-        public MaterialController(ILogger<MaterialController> logger, IMaterialService materialService)
+        public MaterialController(ILogger<MaterialController> logger, MaterialSupervisorProvider materialActor)
         {
             _logger = logger;
-            _materialService = materialService;
+            _materialActor = materialActor();
         }
 
         /// <summary>
@@ -36,7 +41,7 @@ namespace LUM.Services.Material.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(object))]
         public async Task<IActionResult> Get([FromRoute] string id)
         {
-            return Ok(await _materialService.GetById(id));
+            return Ok(await _materialActor.Ask<GetMaterialResponseModel>(new GetMaterialByIdCommand { Id = id }));
         }
 
 
@@ -51,7 +56,7 @@ namespace LUM.Services.Material.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(object))]
         public async Task<IActionResult> Search([FromQuery] string name)
         {
-            return Ok(await _materialService.SearchByName(new SearchMaterialByNameQueryModel() { Name = name, OrderBy = "Name" }));
+            return Ok(await _materialActor.Ask<PagedResult<GetMaterialResponseModel>>(new SearchMaterialByNameQueryModel() { Name = name, OrderBy = "Name" }));
         }
 
 
@@ -65,7 +70,7 @@ namespace LUM.Services.Material.Controllers
         [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(string))]
         public async Task<IActionResult> Post([FromBody] CreateMaterialBindingModel requestModel)
         {
-            return Ok(await _materialService.AddAsync(requestModel));
+            return Ok(await _materialActor.Ask<string>(requestModel));
         }
 
         /// <summary>
@@ -79,7 +84,7 @@ namespace LUM.Services.Material.Controllers
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
-            await _materialService.DeleteAsync(id);
+            await _materialActor.Ask(new DeleteMaterialCommand() { Id = id });
             return NoContent();
         }
 
@@ -91,9 +96,9 @@ namespace LUM.Services.Material.Controllers
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Put(UpdateMaterialBindingModel bindingModel )
+        public async Task<IActionResult> Put(UpdateMaterialBindingModel bindingModel)
         {
-            await _materialService.UpdateAsync(bindingModel);
+            await _materialActor.Ask(bindingModel);
             return Ok();
         }
     }

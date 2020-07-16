@@ -1,5 +1,7 @@
 ﻿using System;
+using Akka.Actor;
 using AutoMapper;
+using LUM.Services.Material.Actor;
 using LUM.Services.Material.Common.Persistence;
 using LUM.Services.Material.Mapper;
 using LUM.Services.Material.Repository;
@@ -42,11 +44,25 @@ namespace LUM.Services.Material.Common.Infrastructure
                 configuration => configuration.AddProfile<MaterialProfile>(),
                 AppDomain.CurrentDomain.GetAssemblies());
 
+  
+            services.AddSingleton(_ => ActorSystem.Create("MaterialMicroservice", ActorConfigurationLoader.Load()));
+
+            var serviceProvider = services.BuildServiceProvider();
+            var mapper = serviceProvider.GetService<IMapper>();
+            var materialRepository= serviceProvider.GetService<MaterialRepository>();
+
+            services.AddSingleton<MaterialSupervisorProvider>(provider =>
+            {
+                var actorSystem = provider.GetService<ActorSystem>();
+                var materialActor = actorSystem.ActorOf(Props.Create(() => new MaterialActor(materialRepository,mapper)));
+                return () => materialActor;
+            });
+
         }
         private static string GetXmlCommentsPath()
         {
             var app = System.AppContext.BaseDirectory;
-            return System.IO.Path.Combine(app, "Exam.Microservice.Shipping.xml");
+            return System.IO.Path.Combine(app, "Test.Microservice.Material.xml");
         }
     }
 }

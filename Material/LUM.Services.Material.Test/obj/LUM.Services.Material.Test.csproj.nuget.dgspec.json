@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj": {}
+    "C:\\Development\\Test\\test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj": {
+    "C:\\Development\\Test\\test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj",
+        "projectUniqueName": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj",
         "projectName": "LUM.Services.Material.Test",
-        "projectPath": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj",
-        "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material.Test\\obj\\",
+        "projectPath": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material.Test\\LUM.Services.Material.Test.csproj",
+        "packagesPath": "C:\\Users\\ali.alipour\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ali.alipour\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -32,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj": {
-                "projectPath": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj"
+              "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj": {
+                "projectPath": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj"
               }
             }
           }
@@ -102,27 +100,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj": {
+    "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj",
+        "projectUniqueName": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj",
         "projectName": "LUM.Services.Material",
-        "projectPath": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj",
-        "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material\\obj\\",
+        "projectPath": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\LUM.Services.Material.csproj",
+        "packagesPath": "C:\\Users\\ali.alipour\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\Test\\test\\Material\\LUM.Services.Material\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ali.alipour\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -145,6 +141,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Akka": {
+              "target": "Package",
+              "version": "[1.4.8, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -204,7 +204,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

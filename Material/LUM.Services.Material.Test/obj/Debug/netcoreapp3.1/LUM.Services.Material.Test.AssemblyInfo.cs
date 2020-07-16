@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LUM.Services.Material", "D:\\Development\\Test\\LUM\\Test\\Material\\LUM.Services.Material", "LUM.Services.Material.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LUM.Services.Material, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Development\\Test\\test\\Material\\LUM.Services.Material", "LUM.Services.Material.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LUM.Services.Material.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
